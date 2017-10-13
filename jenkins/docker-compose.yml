@@ -12,9 +12,9 @@ services:
     - /usr/bin/docker:/usr/bin/docker
     - /usr/lib/x86_64-linux-gnu/libltdl.so.7:/usr/lib/x86_64-linux-gnu/libltdl.so.7
     - /usr/bin/rancher-compose:/usr/bin/rancher-compose
+    - /etc/timezone:/etc/timezone
     tty: true
     ports:
     - 80:8080/tcp
     labels:
       io.rancher.container.pull_image: always
-
