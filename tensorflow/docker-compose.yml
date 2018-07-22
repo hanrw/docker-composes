@@ -1,0 +1,16 @@
+version: '2'
+services:
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu
+    devices:
+    - /dev/nvidia0:/dev/nvidia0:rwm
+    - /dev/nvidiactl:/dev/nvidiactl:rwm
+    - /dev/nvidia-uvm:/dev/nvidia-uvm:rwm
+    volumes:
+    - /home/hanrenwei/data/tensorflow/notebooks:/notebooks
+    - /usr/lib/x86_64-linux-gnu/libcuda.so:/usr/lib/x86_64-linux-gnu/libcuda.so
+    - /usr/lib/x86_64-linux-gnu/libcuda.so.1:/usr/lib/x86_64-linux-gnu/libcuda.so.1
+    - /usr/lib/x86_64-linux-gnu/libcuda.so.384.130:/usr/lib/x86_64-linux-gnu/libcuda.so.384.130
+    - /usr/lib/nvidia-384/libnvidia-fatbinaryloader.so.384.130:/usr/lib/x86_64-linux-gnu/libnvidia-fatbinaryloader.so.384.130
+    ports:
+    - 8889:8888/tcp
