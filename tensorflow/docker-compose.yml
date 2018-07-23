@@ -1,7 +1,7 @@
 version: '2'
 services:
   tensorflow:
-    image: tensorflow/tensorflow:latest-gpu
+    image: tensorflow/tensorflow:latest-gpu-py3
     devices:
     - /dev/nvidia0:/dev/nvidia0:rwm
     - /dev/nvidiactl:/dev/nvidiactl:rwm
