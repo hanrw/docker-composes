@@ -2,9 +2,9 @@ version: '2'
 services:
   tensorflow:
     image: tensorflow/tensorflow:latest-gpu-py3-jupyter
-    devices:
-    - /dev/nvidia0:/dev/nvidia0:rwm
-    - /dev/nvidiactl:/dev/nvidiactl:rwm
+   # devices:
+   # - /dev/nvidia0:/dev/nvidia0:rwm
+   # - /dev/nvidiactl:/dev/nvidiactl:rwm
     #- /dev/nvidia-uvm:/dev/nvidia-uvm:rwm
     volumes:
     - /home/hanrenwei/data/tensorflow/notebooks:/notebooks
