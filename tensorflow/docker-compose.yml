@@ -1,16 +1,8 @@
 version: '2'
 services:
   tensorflow:
-    image: tensorflow/tensorflow:latest-gpu-py3-jupyter
-   # devices:
-   # - /dev/nvidia0:/dev/nvidia0:rwm
-   # - /dev/nvidiactl:/dev/nvidiactl:rwm
-    #- /dev/nvidia-uvm:/dev/nvidia-uvm:rwm
+    image: slamhan/deepfakes-gpu:latest-gpu-py3-jupyter
     volumes:
     - /home/hanrenwei/data/tensorflow/notebooks:/notebooks
-    - /usr/lib/x86_64-linux-gnu/libcuda.so:/usr/lib/x86_64-linux-gnu/libcuda.so
-    - /usr/lib/x86_64-linux-gnu/libcuda.so.1:/usr/lib/x86_64-linux-gnu/libcuda.so.1
-    - /usr/lib/x86_64-linux-gnu/libcuda.so.418.56:/usr/lib/x86_64-linux-gnu/libcuda.so.418.56
-    - /usr/lib/x86_64-linux-gnu/libnvidia-fatbinaryloader.so.418.56:/usr/lib/x86_64-linux-gnu/libnvidia-fatbinaryloader.so.418.56
     ports:
     - 8889:8888/tcp
